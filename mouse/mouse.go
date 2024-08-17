@@ -10,6 +10,10 @@ type Point struct {
 	X, Y int32
 }
 
+func Click(button string) error {
+	return mouse.Click(button)
+}
+
 func Position() (*Point, error) {
 	pos, err := mouse.GetPosition()
 	if err != nil {
